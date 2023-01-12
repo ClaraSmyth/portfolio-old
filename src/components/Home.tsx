@@ -1,7 +1,7 @@
 function Home() {
   return (
     <div className="flex h-[100dvh] flex-col">
-      <header className="flex justify-between px-6 py-2">
+      <header className="fixed flex w-[100dvw] justify-between px-6 py-2">
         <p>Home</p>
         <p>Contact</p>
       </header>

@@ -1,10 +1,11 @@
-import { Home, Projects } from './components';
+import { Home, Projects, About } from './components';
 
 function App() {
   return (
     <div className="App">
       <Home />
       <Projects />
+      <About />
     </div>
   );
 }

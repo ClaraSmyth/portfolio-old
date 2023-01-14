@@ -14,7 +14,7 @@
 
 ## Description
 
-My personal portfolio site
+My personal portfolio site (Still being worked on ;D)
 
 ## Built Using
 

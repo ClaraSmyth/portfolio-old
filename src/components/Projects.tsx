@@ -10,7 +10,7 @@ function Projects() {
     <motion.div
       ref={container}
       style={{ y: spring }}
-      className="grid h-[100dvh] grid-cols-2 items-center justify-items-center gap-4"
+      className="grid h-[100dvh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
       <div className="flex max-w-sm flex-col gap-4">
         <h2 className="text-4xl font-bold">Project Title</h2>
@@ -20,7 +20,7 @@ function Projects() {
         </p>
         <div className="flex gap-2">
           <a
-            className="rounded-lg bg-gray-300 py-2 px-4"
+            className="rounded-lg bg-gray-300 py-2 px-4 font-medium"
             href="https://clarasmyth.github.io/"
             target="_blank"
             rel="noreferrer"
@@ -28,7 +28,7 @@ function Projects() {
             Live Demo
           </a>
           <a
-            className="py-2 px-4 underline underline-offset-4"
+            className="py-2 px-4 font-medium underline underline-offset-4"
             href="https://github.com/ClaraSmyth"
             target="_blank"
             rel="noreferrer"
@@ -38,9 +38,13 @@ function Projects() {
         </div>
       </div>
 
-      <div className="flex flex-wrap gap-4">
-        <img className="aspect-auto w-24" src="https://via.placeholder.com/400x600" alt="" />
-        <img className="aspect-auto w-64" src="https://via.placeholder.com/600x400" alt="" />
+      <div className=" flex items-end justify-center gap-4 max-md:row-start-1">
+        <img
+          className="relative left-8 aspect-auto h-full w-[15%] -rotate-[15deg]"
+          src="https://via.placeholder.com/375x667/blue"
+          alt=""
+        />
+        <img className="aspect-auto h-full w-[70%]" src="https://via.placeholder.com/1600x900" alt="" />
       </div>
     </motion.div>
   );

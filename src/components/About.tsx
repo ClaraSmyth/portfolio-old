@@ -23,7 +23,7 @@ function About() {
     <motion.div
       ref={container}
       style={{ scrollSnapAlign: 'start' }}
-      className="grid h-[100dvh] grid-cols-2 items-center justify-items-center gap-4"
+      className="grid h-[100dvh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
       <motion.div style={{ y: spring }} className="max-w-sm">
         <p className="text-4xl font-bold">About Me</p>

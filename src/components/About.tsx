@@ -24,11 +24,8 @@ function About() {
       ref={container}
       className="grid h-[100dvh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
-      <motion.div
-        style={{ y: spring }}
-        className="flex max-w-sm flex-col gap-4 p-2 text-center md:text-start 2xl:max-w-lg"
-      >
-        <p className="text-4xl font-bold 2xl:text-5xl">About Me</p>
+      <motion.div style={{ y: spring }} className="flex w-[80%] max-w-lg flex-col gap-4 p-4 text-center md:text-start">
+        <p className="text-3xl font-bold sm:text-4xl 2xl:text-5xl">About Me</p>
         <p className="2xl:text-xl">
           I am a highly motivated self-taught web developer with a passion for creating responsive and user-friendly
           webpages. I am constantly learning and excited to continue honing my skills and growing as a developer.
@@ -36,11 +33,11 @@ function About() {
       </motion.div>
       <motion.div
         style={{ y: spring }}
-        className="grid w-full max-w-sm grid-cols-[max-content,1fr] justify-items-end gap-4 p-2 2xl:max-w-xl 2xl:gap-8 2xl:text-xl"
+        className="grid w-full max-w-sm grid-cols-[max-content,1fr] justify-items-end gap-4 p-2 text-sm sm:text-base 2xl:max-w-xl 2xl:gap-8 2xl:text-xl"
       >
         {skills.map((item) => (
           <div key={item.name} className="flex items-center gap-2">
-            <p className="text-lg font-medium 2xl:text-2xl">{item.name}</p>
+            <p className="text-base font-medium sm:text-lg 2xl:text-2xl">{item.name}</p>
             {item.icon}
           </div>
         ))}

@@ -14,9 +14,9 @@ function Projects() {
     >
       <motion.div
         style={{ y: spring }}
-        className="flex max-w-sm flex-col gap-4 text-center md:text-start 2xl:max-w-lg 2xl:text-xl"
+        className="flex w-[80%] max-w-md flex-col gap-4 self-start text-center md:self-center md:text-start 2xl:max-w-lg 2xl:text-xl"
       >
-        <h2 className="text-4xl font-bold 2xl:text-5xl">Project Title</h2>
+        <h2 className="text-3xl font-bold sm:text-4xl 2xl:text-5xl">Project Title</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti placeat necessitatibus iusto a
           commodi exercitationem culpa.

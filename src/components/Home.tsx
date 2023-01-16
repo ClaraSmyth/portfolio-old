@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { useSmoothScroll } from '../hooks';
+import { MdOutlineMailOutline } from 'react-icons/md';
 
 function Home() {
   const container = useRef(null);
@@ -8,9 +9,10 @@ function Home() {
 
   return (
     <div ref={container} className="flex h-[100dvh] flex-col">
-      <header className="fixed flex w-full justify-between px-2 py-2">
-        <p>Home</p>
-        <p>Contact</p>
+      <header className="fixed z-50 flex w-full justify-end p-2">
+        <a className="fold relative" href="mailto:clarasmyth.work@gmail.com">
+          <MdOutlineMailOutline size={'2em'} />
+        </a>
       </header>
       <div className="flex flex-1 flex-col items-center justify-center leading-none">
         <motion.div style={{ y: spring }}>

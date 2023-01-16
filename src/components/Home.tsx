@@ -8,7 +8,7 @@ function Home() {
 
   return (
     <div ref={container} className="flex h-[100dvh] flex-col">
-      <header className="fixed flex w-[100dvw] justify-between px-2 py-2">
+      <header className="fixed flex w-full justify-between px-2 py-2">
         <p>Home</p>
         <p>Contact</p>
       </header>

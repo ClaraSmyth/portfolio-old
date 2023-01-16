@@ -42,13 +42,20 @@ function Projects() {
       </motion.div>
 
       <motion.div style={{ y: spring }} className=" flex items-end justify-center gap-4 max-md:row-start-1">
-        <motion.img
+        <motion.div
           style={{ x: springX, rotate: springRotate }}
-          className="relative left-8 aspect-auto h-full w-[15%]"
-          src="https://via.placeholder.com/375x667/blue"
-          alt=""
-        />
-        <img className="aspect-auto h-full w-[70%]" src="https://via.placeholder.com/1600x900" alt="" />
+          className="phone relative left-4 aspect-auto h-full w-[15%]"
+        >
+          <img src="https://via.placeholder.com/375x667/red" alt="" />
+        </motion.div>
+        <div className="desktop aspect-auto h-full w-[70%]">
+          <div className="desktop-dots">
+            <div className="bg-red-500"></div>
+            <div className="bg-orange-500"></div>
+            <div className="bg-green-500"></div>
+          </div>
+          <img src="https://via.placeholder.com/1600x900" alt="" />
+        </div>
       </motion.div>
     </motion.div>
   );

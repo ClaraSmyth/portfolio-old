@@ -44,7 +44,7 @@ function Projects() {
       <motion.div style={{ y: spring }} className=" flex items-end justify-center gap-4 max-md:row-start-1">
         <motion.div
           style={{ x: springX, rotate: springRotate }}
-          className="phone relative left-4 aspect-auto h-full w-[15%]"
+          className="phone relative left-4 -ml-4 aspect-auto h-full w-[15%]"
         >
           <img src="https://via.placeholder.com/375x667/red" alt="" />
         </motion.div>

@@ -24,7 +24,7 @@ function About() {
       ref={container}
       className="grid h-[100dvh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
-      <motion.div style={{ y: spring }} className="max-w-sm p-2 text-center">
+      <motion.div style={{ y: spring }} className="max-w-sm p-2 text-center md:text-start">
         <p className="text-4xl font-bold">About Me</p>
         <p>
           I am a highly motivated self-taught web developer with a passion for creating responsive and user-friendly

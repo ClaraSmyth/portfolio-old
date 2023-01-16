@@ -9,10 +9,9 @@ function Projects() {
   return (
     <motion.div
       ref={container}
-      style={{ y: spring }}
       className="grid h-[100dvh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
-      <div className="flex max-w-sm flex-col gap-4">
+      <motion.div style={{ y: spring }} className="flex max-w-sm flex-col gap-4">
         <h2 className="text-4xl font-bold">Project Title</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti placeat necessitatibus iusto a
@@ -36,16 +35,16 @@ function Projects() {
             Code
           </a>
         </div>
-      </div>
+      </motion.div>
 
-      <div className=" flex items-end justify-center gap-4 max-md:row-start-1">
+      <motion.div style={{ y: spring }} className=" flex items-end justify-center gap-4 max-md:row-start-1">
         <img
           className="relative left-8 aspect-auto h-full w-[15%] -rotate-[15deg]"
           src="https://via.placeholder.com/375x667/blue"
           alt=""
         />
         <img className="aspect-auto h-full w-[70%]" src="https://via.placeholder.com/1600x900" alt="" />
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

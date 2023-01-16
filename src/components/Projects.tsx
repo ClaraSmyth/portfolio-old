@@ -1,10 +1,11 @@
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
-import { useSmoothScroll } from '../hooks';
+import { useSmoothScroll, useSmoothScrollRotate } from '../hooks';
 
 function Projects() {
   const container = useRef(null);
   const spring = useSmoothScroll(container);
+  const [springX, springRotate] = useSmoothScrollRotate(container);
 
   return (
     <motion.div
@@ -41,8 +42,9 @@ function Projects() {
       </motion.div>
 
       <motion.div style={{ y: spring }} className=" flex items-end justify-center gap-4 max-md:row-start-1">
-        <img
-          className="relative left-8 aspect-auto h-full w-[15%] -rotate-[15deg]"
+        <motion.img
+          style={{ x: springX, rotate: springRotate }}
+          className="relative left-8 aspect-auto h-full w-[15%]"
           src="https://via.placeholder.com/375x667/blue"
           alt=""
         />

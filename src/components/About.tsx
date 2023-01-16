@@ -22,17 +22,19 @@ function About() {
   return (
     <motion.div
       ref={container}
-      style={{ scrollSnapAlign: 'start' }}
       className="grid h-[100dvh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
-      <motion.div style={{ y: spring }} className="max-w-sm">
+      <motion.div style={{ y: spring }} className="max-w-sm p-2 text-center">
         <p className="text-4xl font-bold">About Me</p>
         <p>
           I am a highly motivated self-taught web developer with a passion for creating responsive and user-friendly
           webpages. I am constantly learning and excited to continue honing my skills and growing as a developer.
         </p>
       </motion.div>
-      <motion.div style={{ y: spring }} className="grid w-full max-w-md grid-cols-2 justify-items-end gap-4">
+      <motion.div
+        style={{ y: spring }}
+        className="grid w-full max-w-md grid-cols-[max-content,1fr] justify-items-end gap-4 p-2"
+      >
         {skills.map((item) => (
           <div key={item.name} className="flex items-center gap-2">
             <p className="text-lg font-medium">{item.name}</p>

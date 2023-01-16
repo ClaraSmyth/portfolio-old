@@ -11,13 +11,16 @@ function Projects() {
       ref={container}
       className="grid h-[100dvh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
-      <motion.div style={{ y: spring }} className="flex max-w-sm flex-col gap-4">
-        <h2 className="text-4xl font-bold">Project Title</h2>
+      <motion.div
+        style={{ y: spring }}
+        className="flex max-w-sm flex-col gap-4 text-center md:text-start 2xl:max-w-lg 2xl:text-xl"
+      >
+        <h2 className="text-4xl font-bold 2xl:text-5xl">Project Title</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate corrupti placeat necessitatibus iusto a
           commodi exercitationem culpa.
         </p>
-        <div className="flex gap-2">
+        <div className="flex justify-center gap-2 md:justify-start">
           <a
             className="rounded-lg bg-gray-300 py-2 px-4 font-medium"
             href="https://clarasmyth.github.io/"

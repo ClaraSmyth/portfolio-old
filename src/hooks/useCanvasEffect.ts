@@ -133,8 +133,13 @@ class Effect {
       y: 0,
     };
     window.addEventListener('mousemove', (e) => {
-      this.mouse.x = e.x;
-      this.mouse.y = e.y;
+      const canvas = document.querySelector('canvas');
+      if (!canvas) return;
+      const smoothScrollOffset = canvas.parentElement?.style.transform;
+      if (!smoothScrollOffset) return;
+      const getOffsetValue = smoothScrollOffset === 'none' ? '0' : smoothScrollOffset.split('(')[1].split('px)')[0];
+      this.mouse.x = e.pageX;
+      this.mouse.y = e.pageY - parseFloat(getOffsetValue);
     });
   }
 

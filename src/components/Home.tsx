@@ -2,10 +2,12 @@ import { useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useSmoothScroll } from '../hooks';
 import { MdOutlineMailOutline } from 'react-icons/md';
+import { useWindowSize } from 'usehooks-ts';
 
 function Home() {
   const container = useRef<HTMLDivElement | null>(null);
   const spring = useSmoothScroll(container);
+  const windowSize = useWindowSize();
 
   useEffect(() => {
     const canvas = document.querySelector('canvas');
@@ -15,27 +17,30 @@ function Home() {
     if (!ctx) return;
 
     // Need to set canvas width and height here to avoid distortions
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = windowSize.width;
+    canvas.height = windowSize.height;
 
     // Font Styling
     ctx.fillStyle = 'black';
     ctx.textAlign = 'center';
 
+    const maxLineHeight = windowSize.width * 0.15;
+    const lineHeight = maxLineHeight < 96 ? 96 : maxLineHeight;
+
     const textArr = ['Clara', 'Smyth', 'Web Developer'];
     const textX = canvas.width / 2;
-    const textY = canvas.height / 2 - 100;
+    const textY = canvas.height / 2 - lineHeight / 2;
 
     textArr.forEach((word, index) => {
       if (word === 'Web Developer') {
         ctx.font = 'max(2rem,3vw) Lusitana';
-        ctx.fillText(word, textX, textY + index * 160);
+        ctx.fillText(word, textX, textY + index * lineHeight * 0.85);
         return;
       }
-      ctx.font = 'bold 200px Raleway';
-      ctx.fillText(word, textX, textY + index * 200);
+      ctx.font = 'bold max(6rem,15vw) Raleway';
+      ctx.fillText(word, textX, textY + index * lineHeight);
     });
-  }, []);
+  }, [windowSize]);
 
   return (
     <div ref={container} className="flex h-[100dvh] flex-col">

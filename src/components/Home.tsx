@@ -2,24 +2,25 @@ import { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useSmoothScroll } from '../hooks';
 import { MdOutlineMailOutline } from 'react-icons/md';
-import { useWindowSize } from 'usehooks-ts';
 
 function Home() {
   const container = useRef<HTMLDivElement | null>(null);
   const spring = useSmoothScroll(container);
-  const windowSize = useWindowSize();
   const [firstLoad, setFirstLoad] = useState(true);
 
   useEffect(() => {
     const canvas = document.querySelector('canvas');
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext('2d', {
+      willReadFrequently: true,
+    });
     if (!ctx) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // Need to set canvas width and height here to avoid distortions
-    canvas.width = windowSize.width;
-    canvas.height = windowSize.height;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     class Particle {
       effect: any;
@@ -159,6 +160,15 @@ function Home() {
           particle.draw();
         });
       }
+
+      resize(width: number, height: number) {
+        this.canvasWidth = width;
+        this.canvasHeight = height;
+        this.maxLineHeight = this.canvasWidth * 0.15;
+        this.lineHeight = this.maxLineHeight < 96 ? 96 : this.maxLineHeight;
+        this.textX = this.canvasWidth / 2;
+        this.textY = this.canvasHeight / 2 - this.lineHeight / 2;
+      }
     }
 
     const effect = new Effect(ctx, canvas.width, canvas.height);
@@ -172,9 +182,17 @@ function Home() {
         requestAnimationFrame(animate);
       };
       animate();
+
+      window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        effect.resize(canvas.width, canvas.height);
+        effect.createText(['Clara', 'Smyth', 'Web Developer']);
+        effect.convertToParticles();
+      });
     }
     setFirstLoad(false);
-  }, [windowSize, firstLoad]);
+  }, [firstLoad]);
 
   return (
     <div ref={container} className="flex h-[100dvh] flex-col">

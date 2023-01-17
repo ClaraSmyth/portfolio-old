@@ -14,11 +14,11 @@ function Home() {
           <MdOutlineMailOutline size={'2em'} />
         </a>
       </header>
-      <div className="flex flex-1 flex-col items-center justify-center leading-none">
+      <div className="flex flex-1 flex-col items-center justify-center text-center leading-none">
         <motion.div style={{ y: spring }}>
-          <p className="text-[3vw]">Hi.</p>
-          <p className="-ml-[5%] text-[6vw]">Im Clara.</p>
-          <p className="text-[12vw]">Web Developer.</p>
+          <h2 className="text-[max(6rem,15vw)] leading-none">Clara</h2>
+          <h2 className="mb-24 text-[max(6rem,15vw)] leading-none">Smyth</h2>
+          <p className="text-[max(2rem,3vw)] leading-none">Web Developer</p>
         </motion.div>
       </div>
     </div>

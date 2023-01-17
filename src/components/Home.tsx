@@ -20,26 +20,43 @@ function Home() {
     canvas.width = windowSize.width;
     canvas.height = windowSize.height;
 
-    // Font Styling
-    ctx.fillStyle = 'black';
-    ctx.textAlign = 'center';
+    class Effect {
+      context: CanvasRenderingContext2D;
+      canvasWidth: number;
+      canvasHeight: number;
+      maxLineHeight: number;
+      lineHeight: number;
+      textX: number;
+      textY: number;
 
-    const maxLineHeight = windowSize.width * 0.15;
-    const lineHeight = maxLineHeight < 96 ? 96 : maxLineHeight;
-
-    const textArr = ['Clara', 'Smyth', 'Web Developer'];
-    const textX = canvas.width / 2;
-    const textY = canvas.height / 2 - lineHeight / 2;
-
-    textArr.forEach((word, index) => {
-      if (word === 'Web Developer') {
-        ctx.font = 'max(2rem,3vw) Lusitana';
-        ctx.fillText(word, textX, textY + index * lineHeight * 0.85);
-        return;
+      constructor(context: CanvasRenderingContext2D, canvasWidth: number, canvasHeight: number) {
+        this.context = context;
+        this.canvasWidth = canvasWidth;
+        this.canvasHeight = canvasHeight;
+        this.maxLineHeight = this.canvasWidth * 0.15;
+        this.lineHeight = this.maxLineHeight < 96 ? 96 : this.maxLineHeight;
+        this.textX = this.canvasWidth / 2;
+        this.textY = this.canvasHeight / 2 - this.lineHeight / 2;
       }
-      ctx.font = 'bold max(6rem,15vw) Raleway';
-      ctx.fillText(word, textX, textY + index * lineHeight);
-    });
+
+      createText(textArr: string[]) {
+        this.context.fillStyle = 'black';
+        this.context.textAlign = 'center';
+
+        textArr.forEach((word, index) => {
+          if (word === 'Web Developer') {
+            this.context.font = 'max(2rem,3vw) Lusitana';
+            this.context.fillText(word, this.textX, this.textY + index * this.lineHeight * 0.85);
+            return;
+          }
+          this.context.font = 'bold max(6rem,15vw) Raleway';
+          this.context.fillText(word, this.textX, this.textY + index * this.lineHeight);
+        });
+      }
+    }
+
+    const effect = new Effect(ctx, canvas.width, canvas.height);
+    effect.createText(['Clara', 'Smyth', 'Web Developer']);
   }, [windowSize]);
 
   return (

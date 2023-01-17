@@ -44,7 +44,7 @@ function Home() {
         this.context.textAlign = 'center';
 
         textArr.forEach((word, index) => {
-          if (word === 'Web Developer') {
+          if (index === 2) {
             this.context.font = 'max(2rem,3vw) Lusitana';
             this.context.fillText(word, this.textX, this.textY + index * this.lineHeight * 0.85);
             return;

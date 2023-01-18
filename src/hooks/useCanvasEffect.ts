@@ -1,4 +1,4 @@
-import { useState, useEffect, MouseEvent } from 'react';
+import { useState, useEffect } from 'react';
 
 function useCanvasEffect() {
   const [firstLoad, setFirstLoad] = useState(true);
@@ -13,8 +13,8 @@ function useCanvasEffect() {
     if (!ctx) return;
 
     // Need to set canvas width and height here to avoid distortions
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth > 1600 ? 1600 : window.innerWidth;
+    canvas.height = window.innerHeight > 900 ? 900 : window.innerHeight;
 
     const effect = new Effect(ctx, canvas.width, canvas.height);
     effect.createText(['Clara', 'Smyth', 'Web Developer']);
@@ -38,8 +38,8 @@ function useCanvasEffect() {
       animate();
 
       window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth > 1600 ? 1600 : window.innerWidth;
+        canvas.height = window.innerHeight > 900 ? 900 : window.innerHeight;
         effect.resize(canvas.width, canvas.height);
         effect.createText(['Clara', 'Smyth', 'Web Developer']);
         effect.convertToParticles();
@@ -156,11 +156,11 @@ class Effect {
 
     textArr.forEach((word, index) => {
       if (index === 2) {
-        this.context.font = 'max(2rem,3vw) Lusitana';
+        this.context.font = 'clamp(2rem, 0.6667rem + 3.3333vw, 4rem) Lusitana';
         this.context.fillText(word, this.textX, this.textY + index * this.lineHeight * 0.85);
         return;
       }
-      this.context.font = 'bold max(6rem,15vw) Raleway';
+      this.context.font = 'bold clamp(6rem, 0rem + 15vw, 15rem) Raleway';
       this.context.fillText(word, this.textX, this.textY + index * this.lineHeight);
     });
   }

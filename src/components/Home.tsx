@@ -9,7 +9,7 @@ function Home() {
   useCanvasEffect();
 
   return (
-    <div ref={container} className="flex h-[100dvh] flex-col">
+    <div ref={container} className="flex h-[100svh] flex-col">
       <header className="fixed z-50 flex w-full justify-end p-2">
         <a className="fold relative" href="mailto:clarasmyth.work@gmail.com">
           <MdOutlineMailOutline size={'2em'} />

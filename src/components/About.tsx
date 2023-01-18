@@ -11,7 +11,6 @@ import {
   SiWebpack,
   SiGithub,
 } from 'react-icons/si';
-import { MdOutlineMailOutline } from 'react-icons/md';
 import { motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useSmoothScroll } from '../hooks';
@@ -23,7 +22,7 @@ function About() {
   return (
     <motion.div
       ref={container}
-      className="grid h-[100dvh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
+      className="grid h-[100svh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
       <motion.div style={{ y: spring }} className="flex w-[90%] max-w-lg flex-col gap-4 p-4 text-center md:text-start">
         <h3 className="text-3xl font-bold sm:text-4xl 2xl:text-5xl">About Me</h3>

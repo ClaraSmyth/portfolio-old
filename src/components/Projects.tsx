@@ -10,7 +10,7 @@ function Projects() {
   return (
     <motion.div
       ref={container}
-      className="grid h-[100dvh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
+      className="grid h-[100svh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
       <motion.div
         style={{ y: spring }}

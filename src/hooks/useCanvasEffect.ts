@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, MouseEvent } from 'react';
 
 function useCanvasEffect() {
   const [firstLoad, setFirstLoad] = useState(true);
@@ -13,8 +13,8 @@ function useCanvasEffect() {
     if (!ctx) return;
 
     // Need to set canvas width and height here to avoid distortions
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width = window.innerWidth > 1280 ? 1280 : window.innerWidth;
+    canvas.height = window.innerHeight > 720 ? 720 : window.innerHeight;
 
     const effect = new Effect(ctx, canvas.width, canvas.height);
     effect.createText(['Clara', 'Smyth', 'Web Developer']);
@@ -29,8 +29,8 @@ function useCanvasEffect() {
       animate();
 
       window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth > 1280 ? 1280 : window.innerWidth;
+        canvas.height = window.innerHeight > 720 ? 720 : window.innerHeight;
         effect.resize(canvas.width, canvas.height);
         effect.createText(['Clara', 'Smyth', 'Web Developer']);
         effect.convertToParticles();
@@ -74,11 +74,11 @@ class Particle {
     this.angle = 0;
     this.distance = 0;
     this.friction = Math.random() * 0.6 + 0.15;
-    this.ease = Math.random() * 0.1 + 0.005;
+    this.ease = Math.random() * 0.1 + 0.02;
   }
 
   draw() {
-    this.effect.context.fillStyle = this.colour;
+    // this.effect.context.fillStyle = this.colour;
     this.effect.context.fillRect(this.x, this.y, this.size, this.size);
   }
 
@@ -126,25 +126,23 @@ class Effect {
     this.textY = this.canvasHeight / 2 - this.lineHeight / 2;
     // Particle Values
     this.particles = [];
-    this.gap = 3;
+    this.gap = 2;
     this.mouse = {
       radius: 1000,
       x: 0,
       y: 0,
     };
-    window.addEventListener('mousemove', (e) => {
-      const canvas = document.querySelector('canvas');
-      if (!canvas) return;
-      const smoothScrollOffset = canvas.parentElement?.style.transform;
-      if (!smoothScrollOffset) return;
-      const getOffsetValue = smoothScrollOffset === 'none' ? '0' : smoothScrollOffset.split('(')[1].split('px)')[0];
-      this.mouse.x = e.pageX;
-      this.mouse.y = e.pageY - parseFloat(getOffsetValue);
+    document.querySelector('canvas')?.addEventListener('mousemove', (e: any) => {
+      const pageOffset = e.currentTarget.getBoundingClientRect();
+      this.mouse.x = e.x - pageOffset.left;
+      this.mouse.y = e.y - pageOffset.top;
     });
   }
 
   createText(textArr: string[]) {
     this.context.fillStyle = 'black';
+    this.context.strokeStyle = 'black';
+    this.context.lineWidth = 2;
     this.context.textAlign = 'center';
 
     textArr.forEach((word, index) => {

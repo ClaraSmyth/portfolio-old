@@ -13,24 +13,33 @@ function useCanvasEffect() {
     if (!ctx) return;
 
     // Need to set canvas width and height here to avoid distortions
-    canvas.width = window.innerWidth > 1280 ? 1280 : window.innerWidth;
-    canvas.height = window.innerHeight > 720 ? 720 : window.innerHeight;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     const effect = new Effect(ctx, canvas.width, canvas.height);
     effect.createText(['Clara', 'Smyth', 'Web Developer']);
 
     if (!firstLoad) {
       effect.convertToParticles();
+
+      const isInViewport = (element: HTMLElement) => {
+        const rect = element.getBoundingClientRect();
+        return rect.bottom >= 0;
+      };
+
       const animate = () => {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        effect.render();
+        if (isInViewport(canvas)) {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          effect.render();
+        }
         requestAnimationFrame(animate);
       };
+
       animate();
 
       window.addEventListener('resize', () => {
-        canvas.width = window.innerWidth > 1280 ? 1280 : window.innerWidth;
-        canvas.height = window.innerHeight > 720 ? 720 : window.innerHeight;
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
         effect.resize(canvas.width, canvas.height);
         effect.createText(['Clara', 'Smyth', 'Web Developer']);
         effect.convertToParticles();

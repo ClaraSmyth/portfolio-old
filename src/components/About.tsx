@@ -34,7 +34,7 @@ function About() {
           href="https://github.com/ClaraSmyth"
           target="_blank"
           rel="noreferrer"
-          className="flex items-center justify-center gap-1 text-lg font-semibold md:col-span-2 md:justify-start"
+          className="flex max-w-max items-center justify-center gap-1 text-lg font-semibold md:col-span-2 md:justify-start"
         >
           <SiGithub size={'1.5em'} />
           Clara Smyth

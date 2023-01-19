@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "touch ./dist/.nojekyll && gh-pages -d dist -t true",
     "dev": "vite --port 3000 --host",
     "build": "tsc && vite build",
     "preview": "vite preview --port 3000",

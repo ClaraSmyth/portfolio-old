@@ -43,7 +43,7 @@ const projectsArr = [
   },
   {
     title: 'Battleship',
-    desc: 'A classic battleship game.',
+    desc: 'A classic battleship game. Users can play against a relatively smart AI.',
     demoLink: 'https://clarasmyth.github.io/battleship/',
     codeLink: 'https://github.com/ClaraSmyth/battleship',
     desktopImage: battleshipDesktop,

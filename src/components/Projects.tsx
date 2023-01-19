@@ -1,10 +1,7 @@
 import { motion } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useProjectsArr, useSmoothScroll, useSmoothScrollRotate } from '../hooks';
 import { MdOutlineArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md';
-import { projectsArr } from '../data';
-
-import image from '../assets/shopping-cart-mobile.webp';
 
 function Projects() {
   const container = useRef(null);

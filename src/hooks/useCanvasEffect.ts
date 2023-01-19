@@ -17,9 +17,9 @@ function useCanvasEffect() {
     canvas.height = window.innerHeight > 900 ? 900 : window.innerHeight;
 
     const effect = new Effect(ctx, canvas.width, canvas.height);
-    effect.createText(['Clara', 'Smyth', 'Web Developer']);
 
     if (!firstLoad) {
+      effect.createText(['Clara', 'Smyth', 'Web Developer']);
       effect.convertToParticles();
 
       const isInViewport = (element: HTMLElement) => {
@@ -45,7 +45,9 @@ function useCanvasEffect() {
         effect.convertToParticles();
       });
     }
-    setFirstLoad(false);
+    setTimeout(() => {
+      setFirstLoad(false);
+    }, 1);
   }, [firstLoad]);
 }
 

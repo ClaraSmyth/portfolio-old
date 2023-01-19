@@ -45,7 +45,7 @@ function About() {
         className="grid w-full max-w-sm grid-cols-[max-content,1fr] justify-items-end gap-4 p-2 text-sm sm:text-base 2xl:max-w-xl 2xl:gap-8 2xl:text-xl"
       >
         {skills.map((item) => (
-          <div key={item.name} className="flex items-center gap-2">
+          <div key={item.name} className="group flex items-center gap-2">
             <p className="text-base font-semibold sm:text-lg 2xl:text-2xl">{item.name}</p>
             {item.icon}
           </div>
@@ -56,16 +56,46 @@ function About() {
 }
 
 const skills = [
-  { name: 'HTML', icon: <SiHtml5 size={'3em'} /> },
-  { name: 'CSS', icon: <SiCss3 size={'3em'} /> },
-  { name: 'JavaScript', icon: <SiJavascript size={'3em'} /> },
-  { name: 'SASS', icon: <SiSass size={'3em'} /> },
-  { name: 'React', icon: <SiReact size={'3em'} /> },
-  { name: 'TypeScript', icon: <SiTypescript size={'3em'} /> },
-  { name: 'Tailwind', icon: <SiTailwindcss size={'3em'} /> },
-  { name: 'Jest', icon: <SiJest size={'3em'} /> },
-  { name: 'Git', icon: <SiGit size={'3em'} /> },
-  { name: 'Webpack', icon: <SiWebpack size={'3em'} /> },
+  {
+    name: 'HTML',
+    icon: <SiHtml5 size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#E34F26]" />,
+  },
+  {
+    name: 'CSS',
+    icon: <SiCss3 size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#1572B6]" />,
+  },
+  {
+    name: 'JavaScript',
+    icon: <SiJavascript size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#F7DF1E]" />,
+  },
+  {
+    name: 'SASS',
+    icon: <SiSass size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#CC6699]" />,
+  },
+  {
+    name: 'React',
+    icon: <SiReact size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#61DAFB]" />,
+  },
+  {
+    name: 'TypeScript',
+    icon: <SiTypescript size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#3178C6]" />,
+  },
+  {
+    name: 'Tailwind',
+    icon: <SiTailwindcss size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#06B6D4]" />,
+  },
+  {
+    name: 'Jest',
+    icon: <SiJest size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#C21325]" />,
+  },
+  {
+    name: 'Git',
+    icon: <SiGit size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#F05032]" />,
+  },
+  {
+    name: 'Webpack',
+    icon: <SiWebpack size={'3em'} className="origin-bottom transition duration-300 group-hover:text-[#8DD6F9]" />,
+  },
 ];
 
 export default About;

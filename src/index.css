@@ -43,9 +43,9 @@ h3 {
   display: flex;
   justify-content: center;
   position: relative;
-  outline: 0.125rem solid #d1d5db;
+  outline: 0.125rem solid black;
   outline-offset: -0.01rem;
-  border-top: 1rem solid #d1d5db;
+  border-top: 1rem solid black;
   border-radius: 0.4rem;
 }
 

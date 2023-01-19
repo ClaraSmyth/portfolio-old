@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useRef } from 'react';
 import { useProjectsArr, useSmoothScroll, useSmoothScrollRotate } from '../hooks';
 import { MdOutlineArrowForwardIos, MdOutlineArrowBackIos } from 'react-icons/md';
@@ -15,9 +15,16 @@ function Projects() {
     >
       <motion.div
         style={{ y: spring }}
-        className="flex min-h-[13.75rem] w-[90%] max-w-md flex-col justify-between gap-4 self-start p-4 text-center md:self-end md:text-start 2xl:max-w-lg 2xl:text-xl"
+        className="flex min-h-[13.75rem] w-[90%] max-w-md flex-col justify-between gap-4 self-start p-4 text-center md:self-end md:text-start 2xl:min-h-[15rem] 2xl:max-w-lg 2xl:text-xl"
       >
-        <h3 className="text-3xl font-bold sm:text-4xl 2xl:text-5xl">{currentProject.title}</h3>
+        <motion.h3
+          key={currentProject.title}
+          initial={{ x: -50 }}
+          animate={{ x: 0 }}
+          className="text-3xl font-bold sm:text-4xl 2xl:text-5xl"
+        >
+          {currentProject.title}
+        </motion.h3>
         <p>{currentProject.desc}</p>
         <div className="flex justify-center gap-2 md:justify-start">
           <a
@@ -39,20 +46,47 @@ function Projects() {
         </div>
       </motion.div>
 
-      <motion.div style={{ y: spring }} className=" flex items-end justify-center gap-4 max-md:row-start-1 md:self-end">
+      <motion.div
+        style={{ y: spring }}
+        className=" flex w-full items-end justify-center gap-4 max-md:row-start-1 md:self-end"
+      >
         <motion.div
           style={{ x: springX, rotate: springRotate }}
           className="phone relative left-4 -ml-4 aspect-auto h-full w-[15%]"
         >
-          <img src={currentProject.mobileImage} alt="" />
+          <div className="aspect-[360/740] w-full bg-white">
+            <AnimatePresence>
+              <motion.img
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute rounded-b-md"
+                key={currentProject.mobileImage}
+                src={currentProject.mobileImage}
+                alt=""
+              />
+            </AnimatePresence>
+          </div>
         </motion.div>
-        <div className="desktop aspect-auto h-full w-[70%]">
+        <div className="desktop aspect-auto h-full min-w-[75%]">
           <div className="desktop-dots">
             <div className="bg-red-500"></div>
             <div className="bg-orange-500"></div>
             <div className="bg-green-500"></div>
           </div>
-          <img className="rounded-b-md" src={currentProject.desktopImage} alt="" />
+          <div className="aspect-[16/9] w-full">
+            <AnimatePresence>
+              <motion.img
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="absolute rounded-b-md"
+                key={currentProject.desktopImage}
+                src={currentProject.desktopImage}
+                alt=""
+              />
+            </AnimatePresence>
+          </div>
         </div>
       </motion.div>
 

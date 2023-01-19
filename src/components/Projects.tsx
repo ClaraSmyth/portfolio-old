@@ -21,7 +21,7 @@ function Projects() {
         <p>{currentProject.desc}</p>
         <div className="flex justify-center gap-2 md:justify-start">
           <a
-            className="rounded-lg bg-gray-300 py-2 px-4 font-semibold"
+            className="rounded-lg bg-gray-300 py-2 px-4 font-semibold transition duration-300 hover:bg-gray-400"
             href="https://clarasmyth.github.io/"
             target="_blank"
             rel="noreferrer"
@@ -29,7 +29,7 @@ function Projects() {
             Live Demo
           </a>
           <a
-            className="py-2 px-4 font-semibold underline underline-offset-4"
+            className="py-2 px-4 font-semibold underline underline-offset-4 transition duration-300"
             href="https://github.com/ClaraSmyth"
             target="_blank"
             rel="noreferrer"
@@ -57,10 +57,10 @@ function Projects() {
       </motion.div>
 
       <motion.div style={{ y: spring }} className="flex w-full justify-around self-start md:col-span-2 md:pt-8">
-        <button onClick={pagePrev} className="rounded-full bg-gray-300 p-2">
+        <button onClick={pagePrev} className="rounded-full bg-gray-300 p-2 transition duration-300 hover:bg-gray-400">
           <MdOutlineArrowBackIos size={'2em'} className="relative right-0.5" />
         </button>
-        <button onClick={pageNext} className="rounded-full bg-gray-300 p-2">
+        <button onClick={pageNext} className="rounded-full bg-gray-300 p-2 transition duration-300 hover:bg-gray-400">
           <MdOutlineArrowForwardIos size={'2em'} className="relative left-0.5" />
         </button>
       </motion.div>

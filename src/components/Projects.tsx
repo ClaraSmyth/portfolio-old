@@ -30,7 +30,7 @@ function Projects() {
         <div className="flex justify-center gap-2 md:justify-start">
           <a
             className="rounded-lg bg-gray-300 py-2 px-4 font-semibold transition duration-300 hover:bg-gray-400"
-            href="https://clarasmyth.github.io/"
+            href={currentProject.demoLink}
             target="_blank"
             rel="noreferrer"
           >
@@ -38,7 +38,7 @@ function Projects() {
           </a>
           <a
             className="py-2 px-4 font-semibold underline underline-offset-4 transition duration-300"
-            href="https://github.com/ClaraSmyth"
+            href={currentProject.codeLink}
             target="_blank"
             rel="noreferrer"
           >

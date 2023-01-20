@@ -1,3 +1,6 @@
+import portfolioDesktop from '../assets/portfolio-desktop.webp';
+import portfolioMobile from '../assets/portfolio-mobile.webp';
+
 import shoppingCartDesktop from '../assets/shopping-cart-desktop.webp';
 import shoppingCartMobile from '../assets/shopping-cart-mobile.webp';
 
@@ -17,6 +20,14 @@ import todoAppDesktop from '../assets/todo-app-desktop.webp';
 import todoAppMobile from '../assets/todo-app-mobile.webp';
 
 const projectsArr = [
+  {
+    title: 'Portfolio',
+    desc: 'This portfolio website. Built with Vite/React and tailwindcss, also has custom animations using the framer motion animation library.',
+    demoLink: 'https://clarasmyth.github.io/portfolio',
+    codeLink: 'https://github.com/ClaraSmyth/portfolio',
+    desktopImage: portfolioDesktop,
+    mobileImage: portfolioMobile,
+  },
   {
     title: 'Game Store',
     desc: 'A fake game store with a shopping cart. Users can search for any game. Gets game data from the RAWG game database API.',

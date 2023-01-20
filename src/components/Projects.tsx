@@ -12,7 +12,7 @@ function Projects() {
     <motion.div
       ref={container}
       id={'projects'}
-      className="grid h-[100svh] grid-cols-1 grid-rows-[1fr,min-content,1fr] items-center justify-items-center gap-4 md:grid-cols-2 md:grid-rows-[2fr,1fr]"
+      className="grid h-[100svh] grid-cols-1 grid-rows-[2fr,min-content,1fr] items-center justify-items-center gap-4 md:grid-cols-2 md:grid-rows-[2fr,1fr]"
     >
       <motion.div
         style={{ y: spring }}
@@ -49,7 +49,7 @@ function Projects() {
 
       <motion.div
         style={{ y: spring }}
-        className=" flex w-full items-end justify-center gap-4 max-md:row-start-1 md:self-end"
+        className=" flex w-full items-end justify-center gap-4 self-end max-md:row-start-1"
       >
         <motion.div
           style={{ x: springX, rotate: springRotate }}

@@ -11,6 +11,7 @@ function Projects() {
   return (
     <motion.div
       ref={container}
+      id={'projects'}
       className="grid h-[100svh] grid-cols-1 grid-rows-[1fr,min-content,1fr] items-center justify-items-center gap-4 md:grid-cols-2 md:grid-rows-[2fr,1fr]"
     >
       <motion.div

@@ -30,15 +30,17 @@ function About() {
           I am a highly motivated self-taught web developer with a passion for creating responsive and user-friendly
           webpages. I am constantly learning and excited to continue honing my skills and growing as a developer.
         </p>
-        <a
-          href="https://github.com/ClaraSmyth"
-          target="_blank"
-          rel="noreferrer"
-          className="flex max-w-max items-center justify-center gap-1 text-lg font-semibold md:col-span-2 md:justify-start"
-        >
-          <SiGithub size={'1.5em'} />
-          Clara Smyth
-        </a>
+        <div className="flex justify-center md:justify-start">
+          <a
+            href="https://github.com/ClaraSmyth"
+            target="_blank"
+            rel="noreferrer"
+            className="flex max-w-max items-center justify-center gap-1 text-lg font-semibold md:col-span-2 md:justify-start"
+          >
+            <SiGithub size={'1.5em'} />
+            Clara Smyth
+          </a>
+        </div>
       </motion.div>
       <motion.div
         style={{ y: spring }}

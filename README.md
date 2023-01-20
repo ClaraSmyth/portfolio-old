@@ -7,14 +7,14 @@
 		<img src="https://img.shields.io/static/v1?label=&message=Tailwindcss&color=06B6D4&style=for-the-badge&logo=tailwindcss&logoColor=white&logoWidth=&labelColor=&link=">
 		<br>
 	</h1>
-	<h3><b><a href="https://clarasmyth.github.io/">View Live Demo</a></b></h3>
+	<h3><b><a href="https://clarasmyth.github.io/portfolio">View Live Demo</a></b></h3>
 </div>
 
-![Gif of Project](#)
+![Gif of Project](./readme-assets/portfolio.gif)
 
 ## Description
 
-My personal portfolio site (Still being worked on ;D)
+My personal portfolio site.
 
 ## Built Using
 
@@ -29,19 +29,24 @@ My personal portfolio site (Still being worked on ;D)
 
 #### Libraries
 
-#### Images
+- [Framer Motion](https://www.framer.com/motion/)
 
 #### Icons
 
 - [React Icons](https://github.com/react-icons/react-icons)
+- [Google Material Icons](https://fonts.google.com/icons)
 - [Simple Icons](https://simpleicons.org/)
+
+#### Other
+
+- [FranksLaboratory - Canvas Particle Effect](https://www.youtube.com/@Frankslaboratory/)
 
 ## Gallery
 
 #### Desktop
 
-<img src="./readme-assets/desktop.png" alt="Image of project on Desktop" />
+<img src="./readme-assets/portfolio-desktop.webp" alt="Image of project on Desktop" />
 
 #### Mobile
 
-<img src="./readme-assets/mobile.png" alt="Image of project on Mobile" />
+<img src="./readme-assets/portfolio-mobile.webp" alt="Image of project on Mobile" />

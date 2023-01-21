@@ -16,7 +16,7 @@ function Projects() {
     >
       <motion.div
         style={{ y: spring }}
-        className="flex min-h-[13.75rem] w-[90%] max-w-md flex-col justify-between gap-4 self-start p-4 text-center md:self-end md:text-start 2xl:min-h-[15rem] 2xl:max-w-lg 2xl:text-xl"
+        className="flex min-h-[13.75rem] w-[90%] max-w-md flex-col justify-between gap-4 self-start p-4 text-center md:self-end md:text-start md:text-lg 2xl:min-h-[15rem] 2xl:max-w-lg 2xl:text-xl"
       >
         <motion.h3
           key={currentProject.title}
@@ -29,7 +29,7 @@ function Projects() {
         <p>{currentProject.desc}</p>
         <div className="flex justify-center gap-2 md:justify-start">
           <a
-            className="rounded-lg bg-gray-300 py-2 px-4 font-semibold transition duration-300 hover:bg-gray-400"
+            className="rounded-lg bg-white/30  py-2 px-4 font-semibold transition duration-300 hover:bg-white/50"
             href={currentProject.demoLink}
             target="_blank"
             rel="noreferrer"
@@ -92,10 +92,10 @@ function Projects() {
       </motion.div>
 
       <motion.div style={{ y: spring }} className="flex w-full justify-around self-start md:col-span-2 md:pt-8">
-        <button onClick={pagePrev} className="rounded-full bg-gray-300 p-2 transition duration-300 hover:bg-gray-400">
+        <button onClick={pagePrev} className="rounded-full bg-white/30 p-2 transition duration-300 hover:bg-white/50 ">
           <MdOutlineArrowBackIos size={'2em'} className="relative right-0.5" />
         </button>
-        <button onClick={pageNext} className="rounded-full bg-gray-300 p-2 transition duration-300 hover:bg-gray-400">
+        <button onClick={pageNext} className="rounded-full bg-white/30  p-2 transition duration-300 hover:bg-white/50 ">
           <MdOutlineArrowForwardIos size={'2em'} className="relative left-0.5" />
         </button>
       </motion.div>

@@ -22,11 +22,12 @@ function About() {
   return (
     <motion.div
       ref={container}
+      style={{ color: '#fefedf' }}
       className="grid h-[100svh] grid-cols-1 items-center justify-items-center gap-4 md:grid-cols-2"
     >
       <motion.div style={{ y: spring }} className="flex w-[90%] max-w-lg flex-col gap-4 p-4 text-center md:text-start">
         <h3 className="text-3xl font-bold sm:text-4xl 2xl:text-5xl">About Me</h3>
-        <p className="2xl:text-xl">
+        <p className="md:text-lg 2xl:text-xl">
           I am a highly motivated self-taught web developer with a passion for creating responsive and user-friendly
           webpages. I am constantly learning and excited to continue honing my skills and growing as a developer.
         </p>
@@ -35,7 +36,7 @@ function About() {
             href="https://github.com/ClaraSmyth"
             target="_blank"
             rel="noreferrer"
-            className="flex max-w-max items-center justify-center gap-1 text-lg font-semibold md:col-span-2 md:justify-start"
+            className="flex max-w-max items-center justify-center gap-1 text-lg font-semibold md:col-span-2 md:justify-start md:text-xl"
           >
             <SiGithub size={'1.5em'} />
             Clara Smyth

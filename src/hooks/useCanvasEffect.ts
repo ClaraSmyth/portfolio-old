@@ -151,7 +151,7 @@ class Effect {
   }
 
   createText(textArr: string[]) {
-    this.context.fillStyle = 'black';
+    this.context.fillStyle = '#fde9ff';
     this.context.strokeStyle = 'black';
     this.context.lineWidth = 2;
     this.context.textAlign = 'center';

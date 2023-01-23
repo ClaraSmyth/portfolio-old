@@ -26,6 +26,11 @@ function Projects() {
         >
           {currentProject.title}
         </motion.h3>
+        <div className="flex gap-2 text-2xl">
+          {currentProject.icons.map((icon) => {
+            return icon;
+          })}
+        </div>
         <p>{currentProject.desc}</p>
         <div className="flex justify-center gap-2 md:justify-start">
           <a

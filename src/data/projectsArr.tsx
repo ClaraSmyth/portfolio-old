@@ -1,3 +1,16 @@
+import {
+  SiCss3,
+  SiHtml5,
+  SiJavascript,
+  SiJest,
+  SiReact,
+  SiSass,
+  SiTailwindcss,
+  SiTypescript,
+  SiWebpack,
+  SiVite,
+} from 'react-icons/si';
+
 import portfolioDesktop from '../assets/portfolio-desktop.webp';
 import portfolioMobile from '../assets/portfolio-mobile.webp';
 
@@ -27,6 +40,12 @@ const projectsArr = [
     codeLink: 'https://github.com/ClaraSmyth/portfolio',
     desktopImage: portfolioDesktop,
     mobileImage: portfolioMobile,
+    icons: [
+      <SiVite key={'Vite'} />,
+      <SiReact key={'React'} />,
+      <SiTypescript key={'TypeScript'} />,
+      <SiTailwindcss key={'Tailwind'} />,
+    ],
   },
   {
     title: 'Game Store',
@@ -35,6 +54,7 @@ const projectsArr = [
     codeLink: 'https://github.com/ClaraSmyth/shopping-cart',
     desktopImage: shoppingCartDesktop,
     mobileImage: shoppingCartMobile,
+    icons: [<SiReact key={'React'} />, <SiTypescript key={'TypeScript'} />, <SiTailwindcss key={'Tailwind'} />],
   },
   {
     title: 'Memory Game',
@@ -43,6 +63,7 @@ const projectsArr = [
     codeLink: 'https://github.com/ClaraSmyth/memory-game',
     desktopImage: memoryGameDesktop,
     mobileImage: memoryGameMobile,
+    icons: [<SiReact key={'React'} />, <SiSass key={'Sass'} />],
   },
   {
     title: 'CV Builder',
@@ -51,6 +72,7 @@ const projectsArr = [
     codeLink: 'https://github.com/ClaraSmyth/cv-application',
     desktopImage: cvAppDesktop,
     mobileImage: cvAppMobile,
+    icons: [<SiReact key={'React'} />, <SiSass key={'Sass'} />],
   },
   {
     title: 'Battleship',
@@ -59,6 +81,13 @@ const projectsArr = [
     codeLink: 'https://github.com/ClaraSmyth/battleship',
     desktopImage: battleshipDesktop,
     mobileImage: battleshipMobile,
+    icons: [
+      <SiHtml5 key={'Html'} />,
+      <SiSass key={'Sass'} />,
+      <SiJavascript key={'JavaScript'} />,
+      <SiWebpack key={'Webpack'} />,
+      <SiJest key={'Jest'} />,
+    ],
   },
   {
     title: 'Weather App',
@@ -67,6 +96,12 @@ const projectsArr = [
     codeLink: 'https://github.com/ClaraSmyth/weather-app',
     desktopImage: weatherAppDesktop,
     mobileImage: weatherAppMobile,
+    icons: [
+      <SiHtml5 key={'Html'} />,
+      <SiSass key={'Sass'} />,
+      <SiJavascript key={'JavaScript'} />,
+      <SiWebpack key={'Webpack'} />,
+    ],
   },
   {
     title: 'Todo List',
@@ -75,6 +110,12 @@ const projectsArr = [
     codeLink: 'https://github.com/ClaraSmyth/todo-list',
     desktopImage: todoAppDesktop,
     mobileImage: todoAppMobile,
+    icons: [
+      <SiHtml5 key={'Html'} />,
+      <SiCss3 key={'Css3'} />,
+      <SiJavascript key={'JavaScript'} />,
+      <SiWebpack key={'Webpack'} />,
+    ],
   },
 ];
 

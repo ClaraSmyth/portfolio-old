@@ -16,7 +16,7 @@ function Projects() {
     >
       <motion.div
         style={{ y: spring }}
-        className="flex min-h-[13.75rem] w-[90%] max-w-md flex-col justify-between gap-4 self-start p-4 text-center md:self-end md:text-start md:text-lg 2xl:min-h-[15rem] 2xl:max-w-lg 2xl:text-xl"
+        className="flex w-[90%] max-w-md flex-col justify-between gap-4 self-start p-4 text-center md:self-end md:text-start md:text-lg 2xl:min-h-[17.5rem] 2xl:max-w-lg 2xl:text-xl"
       >
         <motion.h3
           key={currentProject.title}

@@ -34,6 +34,19 @@ import todoAppMobile from '../assets/todo-app-mobile.webp';
 
 const projectsArr = [
   {
+    title: 'Game Store',
+    desc: 'A fake game store with a shopping cart. Users can search for any game. Gets game data from the RAWG game database API.',
+    demoLink: 'https://clarasmyth.github.io/shopping-cart',
+    codeLink: 'https://github.com/ClaraSmyth/shopping-cart',
+    desktopImage: shoppingCartDesktop,
+    mobileImage: shoppingCartMobile,
+    icons: [
+      <SiReact key={'React'} title={'React'} />,
+      <SiTypescript key={'TypeScript'} title={'TypeScript'} />,
+      <SiTailwindcss key={'Tailwind'} title={'Tailwind'} />,
+    ],
+  },
+  {
     title: 'Portfolio',
     desc: 'This portfolio website. Built with Vite/React and tailwindcss, also has custom animations using the framer motion animation library.',
     demoLink: 'https://clarasmyth.github.io/portfolio',
@@ -41,20 +54,11 @@ const projectsArr = [
     desktopImage: portfolioDesktop,
     mobileImage: portfolioMobile,
     icons: [
-      <SiVite key={'Vite'} />,
-      <SiReact key={'React'} />,
-      <SiTypescript key={'TypeScript'} />,
-      <SiTailwindcss key={'Tailwind'} />,
+      <SiVite key={'Vite'} title={'Vite'} />,
+      <SiReact key={'React'} title={'React'} />,
+      <SiTypescript key={'TypeScript'} title={'TypeScript'} />,
+      <SiTailwindcss key={'Tailwindcss'} title={'Tailwindcss'} />,
     ],
-  },
-  {
-    title: 'Game Store',
-    desc: 'A fake game store with a shopping cart. Users can search for any game. Gets game data from the RAWG game database API.',
-    demoLink: 'https://clarasmyth.github.io/shopping-cart',
-    codeLink: 'https://github.com/ClaraSmyth/shopping-cart',
-    desktopImage: shoppingCartDesktop,
-    mobileImage: shoppingCartMobile,
-    icons: [<SiReact key={'React'} />, <SiTypescript key={'TypeScript'} />, <SiTailwindcss key={'Tailwind'} />],
   },
   {
     title: 'Memory Game',
@@ -63,7 +67,7 @@ const projectsArr = [
     codeLink: 'https://github.com/ClaraSmyth/memory-game',
     desktopImage: memoryGameDesktop,
     mobileImage: memoryGameMobile,
-    icons: [<SiReact key={'React'} />, <SiSass key={'Sass'} />],
+    icons: [<SiReact key={'React'} title={'React'} />, <SiSass key={'Sass'} title={'Sass'} />],
   },
   {
     title: 'CV Builder',
@@ -72,7 +76,7 @@ const projectsArr = [
     codeLink: 'https://github.com/ClaraSmyth/cv-application',
     desktopImage: cvAppDesktop,
     mobileImage: cvAppMobile,
-    icons: [<SiReact key={'React'} />, <SiSass key={'Sass'} />],
+    icons: [<SiReact key={'React'} title={'React'} />, <SiSass key={'Sass'} title={'Sass'} />],
   },
   {
     title: 'Battleship',
@@ -82,11 +86,11 @@ const projectsArr = [
     desktopImage: battleshipDesktop,
     mobileImage: battleshipMobile,
     icons: [
-      <SiHtml5 key={'Html'} />,
-      <SiSass key={'Sass'} />,
-      <SiJavascript key={'JavaScript'} />,
-      <SiWebpack key={'Webpack'} />,
-      <SiJest key={'Jest'} />,
+      <SiHtml5 key={'Html'} title={'Html'} />,
+      <SiSass key={'Sass'} title={'Sass'} />,
+      <SiJavascript key={'JavaScript'} title={'JavaScript'} />,
+      <SiWebpack key={'Webpack'} title={'Webpack'} />,
+      <SiJest key={'Jest'} title={'Jest'} />,
     ],
   },
   {
@@ -97,10 +101,10 @@ const projectsArr = [
     desktopImage: weatherAppDesktop,
     mobileImage: weatherAppMobile,
     icons: [
-      <SiHtml5 key={'Html'} />,
-      <SiSass key={'Sass'} />,
-      <SiJavascript key={'JavaScript'} />,
-      <SiWebpack key={'Webpack'} />,
+      <SiHtml5 key={'Html'} title={'Html'} />,
+      <SiSass key={'Sass'} title={'Sass'} />,
+      <SiJavascript key={'JavaScript'} title={'JavaScript'} />,
+      <SiWebpack key={'Webpack'} title={'Webpack'} />,
     ],
   },
   {
@@ -111,10 +115,10 @@ const projectsArr = [
     desktopImage: todoAppDesktop,
     mobileImage: todoAppMobile,
     icons: [
-      <SiHtml5 key={'Html'} />,
-      <SiCss3 key={'Css3'} />,
-      <SiJavascript key={'JavaScript'} />,
-      <SiWebpack key={'Webpack'} />,
+      <SiHtml5 key={'Html5'} title={'Html5'} />,
+      <SiCss3 key={'Css3'} title={'Css3'} />,
+      <SiJavascript key={'JavaScript'} title={'JavaScript'} />,
+      <SiWebpack key={'Webpack'} title={'Webpack'} />,
     ],
   },
 ];
